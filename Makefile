@@ -6,6 +6,7 @@ clean:
 
 .PHONY: build
 build:
+	pipenv lock --requirements > requirements.txt
 	pipenv install --dev
 	pipenv run pipenv-setup sync
 	test
